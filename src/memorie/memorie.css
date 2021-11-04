@@ -1,0 +1,218 @@
+/* Mixin's */
+html {
+  background-image: url("../img/retina_wood.png");
+  animation: entrance 0.5s linear 0s 1 normal both;
+}
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+#minutes,
+#seconds,
+#tens {
+  font-size: 2em;
+}
+button {
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  border: solid 1px #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+  left: 40%;
+  position: relative;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.wrapper {
+  display: block;
+}
+.controle {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#container {
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  padding-left: 20px;
+}
+#container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+[data-view="card"] {
+  transform: rotateY(180deg);
+  width: 70px;
+  height: 110px;
+  border: solid 1px #d3cece;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  cursor: pointer;
+  background: linear-gradient(
+      135deg,
+      #333 22px,
+      #fff 22px,
+      #fff 24px,
+      transparent 24px,
+      transparent 67px,
+      #fff 67px,
+      #fff 69px,
+      transparent 69px
+    ),
+    linear-gradient(
+        225deg,
+        #333 22px,
+        #fff 22px,
+        #fff 24px,
+        transparent 24px,
+        transparent 67px,
+        #fff 67px,
+        #fff 69px,
+        transparent 69px
+      )
+      0 64px;
+  background-color: #333;
+  background-size: 64px 128px;
+}
+.flipped {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+.reverse {
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(180deg);
+}
+
+.correct {
+  opacity: 0.9;
+  cursor: default;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+img {
+  transform: rotateY(180deg);
+  margin: 0px 2px 2px 0px;
+  width: 70px;
+  height: 110px;
+  border-radius: 5px;
+  float: left;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  position: relative;
+  background-color: #333;
+}
+
+img.reverse {
+  display: none;
+}
+
+.easy-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, minmax(min(10rem, 100%), 1fr));
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.pop-up {
+  width: 40%;
+  height: 30%;
+  background-color: white;
+  color: #333;
+  position: absolute;
+  margin: 5% auto;
+  padding: 5%;
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.action {
+  position: relative;
+  top: 60%;
+  display: flex;
+  justify-content: center;
+}
+.button {
+  margin: 0 30%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #ff8566;
+}
+
+.close-button {
+  transition: all 0.5s ease;
+  position: absolute;
+  background-color: #ff9980;
+  padding: 1.5px 7px;
+  left: 0;
+  margin-left: -10px;
+  margin-top: -11.5%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: white;
+  -webkit-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 1px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.close-button:hover {
+  background-color: tomato;
+  color: #fff;
+}
+
+.display {
+  display: none;
+}

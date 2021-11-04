@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="memorie.css">
+</head>
+<body>
+  <div class="wrapper">
+    <button><a href="../index.html">Back</a></button>
+    <div class="controle">
+      <div>
+        <h2>Memorie Game</h2>
+        <h3>Click any card to begin</h3>
+        <p><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></p>
+        <p id="text"></p>
+      </div>
+      <div>
+        <h3>Player</h3>
+        <p>Played: <span id="play">00</span> </p>
+        <p>Found: <span id="open">00</span> </p>
+        <p>Remaining: <span id="remaining">52</span> </p>
+      </div>
+    </div>
+    <div id="container">
+        <div class="pop-up display" id="pop">
+          <a href="#" class="close-button">&#10006;</a>
+          <h3>GAME OVER</h3>
+          <p id="win"></p>
+          <div class="action">
+            <a href="memorie.html" class="button">Restart</a>
+            <a href="../index.html" class="button">End</a>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script src="memorie.js"></script>
+</body>
+</html>
+
+
