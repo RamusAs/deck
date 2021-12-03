@@ -9,6 +9,7 @@
     <title>War_Game</title>
 </head>
 <body>
+    <div></div>
     <div class="top">
         <button><a href="../index.html">Back</a></button>
     <button id ="shuffle-btn" class="shuffle-class">Shuffle</button>
@@ -26,6 +27,23 @@
     <p id="counter1">My Score:0</p>
     <p id="rem-btn" class="rem-class">Remaining Cards: <span id="rem-nbr">00</span></p>
     <button id ="draw-card" class="draw-class">Draw</button>
+    <button id="help">❔</button>
+
+
+
+    <div class="cd-popup" id="cd-popup" role="alert">
+        <div class="cd-popup-container">
+            <h1>Les regles du jeux</h1>
+            <p>On distribue les 52 cartes aux joueurs (la bataille se joue généralement à deux) qui les rassemblent face cachée en
+            paquet devant eux. <br>
+            Chacun tire la carte du dessus de son paquet et la pose face visible sur la table. <br>
+            Celui qui a la carte la plus forte ramasse les autres cartes.<br>
+            L'as est la plus forte carte, puis roi, dame, valet, 10, etc.<br>
+            Lorsque deux joueurs posent en même temps deux cartes de même valeur il y a "Egalité"</p>
+
+            <a href="#0" class="cd-popup-close img-replace"></a>
+        </div> <!-- cd-popup-container -->
+    </div>
     <script src="war.js"></script>
 </body>
 </html>

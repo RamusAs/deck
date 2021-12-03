@@ -7,7 +7,9 @@ var cardsOpen = document.getElementById("open");
 var remaining = document.getElementById("remaining");
 var text = document.getElementById('text');
 var winText = document.getElementById('win');
-var pop = document.getElementById('pop')
+
+let help = document.getElementById("help")
+let popup = document.getElementById('cd-popup')
 
 var resultsArray = [];
 var counter = 0;
@@ -77,6 +79,7 @@ startTimer = () => {
   
 }
 
+
 // get decks
 
 var requestOptions = {
@@ -133,3 +136,19 @@ fetch(`https://www.deckofcardsapi.com/api/deck/new/draw/?count=52`, requestOptio
   .catch(error => console.log('error', error));
 
 
+
+/* ---------------------------------------------
+                         POP UP 
+   ---------------------------------------------*/
+
+
+help.addEventListener('click', (event) => {
+    event.preventDefault();
+    popup.classList.add("is-visible");
+});
+
+
+popup.addEventListener('click', (event) => {
+    event.preventDefault();
+    popup.classList.remove("is-visible");
+});

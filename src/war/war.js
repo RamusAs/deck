@@ -6,6 +6,8 @@ let countBtn1 = document.getElementById("counter1")
 let winner = document.getElementById("winner-container")
 let drawBtn = document.getElementById("draw-card")
 let shuffBtn = document.getElementById("shuffle-btn")
+let help = document.getElementById("help")
+let popup = document.getElementById('cd-popup')
 let Card1
 let Card2
 
@@ -132,4 +134,20 @@ shuffBtn.addEventListener('click',shuffleCard) // shuffle card on click
 
 drawBtn.addEventListener('click',drawCard) // draw card on click
 
-      
+
+
+/* ---------------------------------------------
+                         POP UP 
+   ---------------------------------------------*/
+
+
+help.addEventListener('click', (event) => {
+    event.preventDefault();
+    popup.classList.add("is-visible");
+});
+
+
+popup.addEventListener('click', (event) => {
+    event.preventDefault();
+    popup.classList.remove("is-visible");
+});
